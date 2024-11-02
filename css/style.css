@@ -18,7 +18,7 @@ button {
   font-size: 18px;
   font-weight: 500;
   color: hsla(0, 0%, 100%, 1);
-  background: linear-gradient(97.16deg, #d10ed1 12.04%, #10a3da 81.84%);
+  background: linear-gradient(to bottom right, #e100ff, #008cff);
 }
 .container {
   max-width: 1250px;
@@ -112,13 +112,31 @@ nav a {
   display: flex;
   gap: 20px;
 }
-.explore-btn button:nth-child(1) {
+.explore-btn1 {
   width: 173px;
   height: 54px;
 }
-.explore-btn button:nth-child(2) {
+.explore-btn2 {
   width: 173px;
   height: 54px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.explore-btn2::after {
+  content: "";
+  position: absolute;
+  width: 102%;
+  height: 103%;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #e100ff, #008cff);
+  z-index: -1;
+}
+.explore-btn2:hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #008cffbb, -40px 0 100px #e100ffaa;
 }
 .explore-list {
   display: flex;
@@ -227,14 +245,35 @@ nav a {
   display: flex;
   gap: 20px;
 }
-.box-btn button:nth-child(1) {
+.box-btn1 {
   width: 103px;
   height: 36px;
+  font-size: 16px;
 }
-.box-btn button:nth-child(2) {
+.box-btn2 {
   width: 122px;
   height: 36px;
+  position: relative;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsla(243, 63%, 8%, 1);
 }
+.box-btn2::after {
+  content: "";
+  position: absolute;
+  width: 102%;
+  height: 103%;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #e100ff, #008cff);
+  z-index: -1;
+}
+.box-btn2:hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #008cffbb, -40px 0 100px #e100ffaa;
+}
+
 #our {
   padding-block: 50px;
 }
